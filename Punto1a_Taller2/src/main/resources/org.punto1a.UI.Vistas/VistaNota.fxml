@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="TOP_CENTER"
+      xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.punto1a.UI.Controladores.ControladorNota">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <Label fx:id="lblEstudiante" text="Estudiante: "/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Valor Nota:"/>
+        <TextField fx:id="txtValorNota" promptText="Ej. 4.5 ó Aprobó"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="btnGuardar"  text="Guardar"  onAction="#onGuardarNota"/>
+        <Button fx:id="btnCancelar" text="Cancelar" onAction="#onCancelar"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="TOP_CENTER"
+      xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.punto1a.UI.Controladores.ControladorEstudiante">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <Label fx:id="lblCurso" text="Curso: "/>
+
+    <!-- Línea para agregar un estudiante -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Nombre Estudiante:"/>
+        <TextField fx:id="txtNombreEstudiante" promptText="Ingrese nombre"/>
+        <Button fx:id="btnAgregar" text="Agregar" onAction="#onAgregarEstudiante"/>
+    </HBox>
+
+    <!-- Botones de acción -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="btnGestionarNota" text="Asignar/Editar Nota" onAction="#onGestionarNota"/>
+        <Button fx:id="btnVolver" text="Volver" onAction="#onVolver"/>
+    </HBox>
+
+    <!-- Tabla de estudiantes -->
+    <TableView fx:id="tblEstudiantes" prefHeight="300" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="300"/>
+            <TableColumn fx:id="colNota"   text="Nota" prefWidth="200"/>
+        </columns>
+    </TableView>
+</VBox>
+

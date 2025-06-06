@@ -1,0 +1,6 @@
+CURSO|Matemáticas 1|CUANTITATIVA
+ESTUDIANTE|Juan Perez|4.5
+ESTUDIANTE|Ana Ruiz|3.7
+CURSO|Ética|CUALITATIVA
+ESTUDIANTE|Carlos Cadena|Aprobó
+ESTUDIANTE|Sofía Quintero|Reprobó

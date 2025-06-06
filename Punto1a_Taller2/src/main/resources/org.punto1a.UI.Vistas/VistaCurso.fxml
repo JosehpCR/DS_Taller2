@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="TOP_CENTER"
+      xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.punto1a.UI.Controladores.ControladorCurso">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <!-- Línea para crear un curso -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Nombre:"/>
+        <TextField fx:id="txtNombre" promptText="Ingrese nombre"/>
+        <Label text="Tipo Nota:"/>
+        <ComboBox fx:id="cmbTipo" prefWidth="140"/>
+        <Button fx:id="btnCrear" text="Crear" onAction="#onCrearCurso"/>
+    </HBox>
+
+    <!-- Botones de acciones -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="btnGestionarEstudiantes"
+                text="Gestionar Estudiantes"
+                onAction="#onGestionarEstudiantes"/>
+        <Button fx:id="btnGuardar"
+                text="Guardar en TXT"
+                onAction="#onGuardar"/>
+        <Button fx:id="btnCargar"
+                text="Cargar desde TXT"
+                onAction="#onCargarCursos"/>
+        <Button fx:id="btnCargarPrueba"
+                text="Cargar datos de prueba"
+                onAction="#onCargarDatosPrueba"/>
+    </HBox>
+
+    <!-- Tabla de cursos -->
+    <TableView fx:id="tblCursos" prefHeight="300" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="colNombre" text="Curso" prefWidth="300"/>
+            <TableColumn fx:id="colTipo"   text="Tipo de Nota" prefWidth="200"/>
+        </columns>
+    </TableView>
+</VBox>
+
